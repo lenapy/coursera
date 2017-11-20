@@ -1,5 +1,6 @@
 """
-найти сумму цифр, из которых состоит строка.
+Task: calculate sum of numbers in string
+This is variant 2 of my solution, using while loop to input string.
 """
 
 if __name__ == '__main__':
