@@ -4,8 +4,7 @@ The goal is to print the ladder using the space characters " " and the "#" grids
 """
 
 import sys
-stairs = sys.argv[1]
-stairs_digit = int(stairs)
+stairs_digit = int(sys.argv[1])
 whitespace = ' '
 grid = '#'
 number_of_grid = 1
