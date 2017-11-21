@@ -1,6 +1,9 @@
 """
-Task:  to calculate how many identical words in the string 'words'
+Task:  to calculate how many identical words in the string 'words', and return 3 most popular words.
 """
+import operator
+
+
 words = """Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
@@ -29,6 +32,8 @@ for word in lst_words:
         count_words[clean_word] = 1
     else:
         count_words[clean_word] += 1
-print(count_words)
+items = count_words.items()
+print(sorted(items, key=operator.itemgetter(1), reverse=True)[:3])
+
 
 
