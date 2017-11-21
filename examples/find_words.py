@@ -2,6 +2,7 @@
 Task:  to calculate how many identical words in the string 'words', and return 3 most popular words.
 """
 import operator
+from collections import Counter
 
 
 words = """Beautiful is better than ugly.
@@ -34,6 +35,13 @@ for word in lst_words:
         count_words[clean_word] += 1
 items = count_words.items()
 print(sorted(items, key=operator.itemgetter(1), reverse=True)[:3])
+
+cleaned_list = []
+for word in lst_words:
+    clean_word = word.strip('.,*!').lower()
+    cleaned_list.append(clean_word)
+
+print(Counter(cleaned_list).most_common(3))
 
 
 
